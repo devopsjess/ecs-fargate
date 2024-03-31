@@ -2,6 +2,7 @@
 # HINT: if you would like to use your own docker image, update the container_definitions image_url
 # accordingly
 
+
 resource "aws_ecs_task_definition" "own_task_definition" {
   family                = "luqmanecstaskdef" # Update accordingly
   requires_compatibilities = ["FARGATE"]
