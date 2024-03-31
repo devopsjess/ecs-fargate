@@ -1,5 +1,5 @@
 resource "aws_lb" "ecs-alb" {
-  name               = "luqman-ecs-alb"
+  name               = "wutyee-ecs-alb"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [var.sg_id]
