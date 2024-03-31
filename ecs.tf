@@ -3,7 +3,7 @@
 # accordingly
 
 resource "aws_ecs_task_definition" "own_task_definition" {
-  family                = "wutyeeesttaskdef" # Update accordingly
+  family                = "jessesttaskdef" # Update accordingly
   requires_compatibilities = ["FARGATE"]
   network_mode             = "awsvpc"
   execution_role_arn        = var.ex_role_arn
@@ -11,11 +11,11 @@ resource "aws_ecs_task_definition" "own_task_definition" {
   memory                = 4096
 
   container_definitions = templatefile("./files/task-definition.json", {
-    image_url        = "255945442255.dkr.ecr.us-east-1.amazonaws.com/wutyee-test-ecr-repo:latest"
-    container_name   = "wutyee-test-ecs"
-    port_name        = "wutyee-test-ecs-8080-tcp"
+    image_url        = "255945442255.dkr.ecr.us-east-1.amazonaws.com/jess-test-ecr-repo:latest"
+    container_name   = "jess-test-ecs"
+    port_name        = "jess-test-ecs-8080-tcp"
     log_group_region = "us-east-1"
-    log_group_name   = "/ecs/wutyeeesttaskdef"
+    log_group_name   = "/ecs/jessesttaskdef"
     log_group_prefix = "ecs"
   })
 }
