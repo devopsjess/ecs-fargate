@@ -51,7 +51,7 @@ jobs:
 
     steps:
       - name: Pause 10min to verify ecs creation
-        run: sleep 600
+        run: sleep 1200
 
   terraform-destroy:
     needs: terraform-wait
