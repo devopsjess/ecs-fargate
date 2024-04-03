@@ -6,6 +6,7 @@ resource "aws_lb" "ecs-alb" {
   subnets            = toset(data.aws_subnets.existing_subnets.ids)
 
   enable_deletion_protection = false
+  
 
   tags = {
     Environment = "production"
