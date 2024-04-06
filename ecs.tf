@@ -11,7 +11,7 @@ resource "aws_ecs_task_definition" "own_task_definition" {
   memory                = 4096
 
   container_definitions = templatefile("./files/task-definition.json", {
-    image_url        = "255945442255.dkr.ecr.us-east-1.amazonaws.com/jess-test-ecr-repo:latest"
+    image_url        = "255945442255.dkr.ecr.us-east-1.amazonaws.com/lfchin-docker-test:latest"
     container_name   = "jess-test-ecs"
     port_name        = "jess-test-ecs-8080-tcp"
     log_group_region = "us-east-1"
